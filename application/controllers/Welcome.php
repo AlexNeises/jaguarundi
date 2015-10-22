@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
 
+	protected $ci;
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,6 +21,23 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->ci =& get_instance(); //Initializes instance of database.
+
+		$select = sprintf("SELECT * FROM movies"); //Normal SQL query.
+		$query = $this->ci->db->query($select); //Executes query.
+
+		$movies = array(); //Defining array to store results.
+
+		if($query->num_rows() > 0) //Making sure our query returns at least one row.
+		{
+			foreach($query->result() as $row) //Loops through each row
+			{
+				$movies[] = $row->title; //Stores each row in an array.
+			}
+		}
+
+		var_dump($movies); //Dumps the array out to the user.
+
 		$this->load->view('welcome_message');
 	}
 }

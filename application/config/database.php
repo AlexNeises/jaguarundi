@@ -75,10 +75,11 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => '',
+	'hostname' => '127.0.0.1',
+	'username' => 'root',
 	'password' => '',
-	'database' => '',
+	'database' => 'Jaguarundi',
+	'port'     => 3307,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
