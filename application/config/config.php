@@ -207,7 +207,7 @@ $config['directory_trigger'] = 'd';
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 3;
 
 /*
 |--------------------------------------------------------------------------
@@ -281,6 +281,17 @@ $config['cache_path'] = '';
 
 /*
 |--------------------------------------------------------------------------
+| Custom Config Variables
+|--------------------------------------------------------------------------
+|
+| Custom config variables can be set here.
+|
+*/
+$config['database_default'] = '';
+$config['database_info'] 	= '';
+
+/*
+|--------------------------------------------------------------------------
 | Cache Include Query String
 |--------------------------------------------------------------------------
 |
@@ -308,7 +319,7 @@ $config['cache_query_string'] = FALSE;
 | http://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = 'fjdisafljdisajfsidajf894389f3hoiawhi';
 
 /*
 |--------------------------------------------------------------------------
